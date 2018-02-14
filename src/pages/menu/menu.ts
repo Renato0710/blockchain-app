@@ -32,7 +32,7 @@ export class MenuPage {
 
   cerrarSesion(){
     var alert = this.alertCtrl.create({
-      title : 'Seguro que desea cerrar sesion?.',
+      title : 'Seguro que desea cerrar sesion?',
       buttons: [
         {
           text: 'Cancelar',
