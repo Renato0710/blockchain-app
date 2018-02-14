@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>peticiones</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Propiedad</ion-label>
+      <ion-select interface = "popover" [(ngModel)]="propiedadID">
+          <ion-option *ngFor="let p of propiedades" value={{p.id}}>ID: {{p.id}}</ion-option>
+      </ion-select><br>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Persona(DNI)</ion-label>
+      <ion-input type="number" [(ngModel)]='personaID'></ion-input>
+    </ion-item>
+  </ion-list><br>
+
+  <button ion-button color="light" full round (click)='emitirPeticion()'>Emitir Peticion</button>
+
+</ion-content>

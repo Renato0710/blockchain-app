@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Propiedades</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]='propiedad.nombre'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Descripcion</ion-label>
+        <ion-input type="text" [(ngModel)]='propiedad.descripcion'></ion-input>
+    </ion-item>
+  </ion-list><br>
+
+  <button ion-button color="light" full round (click)='registrar()'>Registrar</button><br>
+
+  <ion-title>Propiedades</ion-title><br><br>
+    <ion-list *ngFor="let p of propiedades">
+      <ion-item>
+        <ion-label>Nombre : {{p.nombre}}</ion-label>
+        <button ion-button item-end clear large>
+          <ion-icon name="information-circle" (click)="info(p)"></ion-icon>
+        </button>
+      </ion-item> 
+  </ion-list>
+
+</ion-content>

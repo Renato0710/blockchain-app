@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>solicitudesRecividas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-title>Solicitudes</ion-title><br><br>
+  <ion-list *ngFor="let s of solicitudes">
+    <ion-item>
+      <ion-label>ID : {{s.id}},  Emisor : {{s.emisor.substr(33)}}</ion-label>
+      <button ion-button item-end clear large>
+        <ion-icon name="information-circle" (click)="info(s)"></ion-icon>
+      </button>
+    </ion-item> 
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+
+  <ion-navbar hideBackButton>
+    <ion-buttons end>
+        <button ion-button (click)="cerrarSesion()">
+          <ion-icon name="power"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title>Menu</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <button ion-button color="light" full round (click)='propiedades()'>Propiedades</button><br>
+    <button ion-button color="light" full round (click)='peticiones()'>Solicitar Intercambio</button><br>
+    <button ion-button color="light" full round (click)='solicitudes()'>Solicitudes</button>
+</ion-content>

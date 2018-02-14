@@ -1,0 +1,33 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Crear Cuenta</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+      <ion-item>
+        <ion-label floating>DNI</ion-label>
+          <ion-input type="number" [(ngModel)]='user.dni'></ion-input>
+        </ion-item>
+      <ion-item>
+        <ion-label floating>Nombre</ion-label>
+          <ion-input type="text" [(ngModel)]='user.nombre'></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]='user.clave'></ion-input>
+          </ion-item>
+      <ion-item>
+        <ion-label floating>Confirmar Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]='user.clave2'></ion-input>
+      </ion-item>
+  </ion-list><br>
+
+  <button ion-button color="light" full round (click)='crearCuenta()'>Crear Cuenta</button>
+
+</ion-content>
